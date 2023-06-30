@@ -1,0 +1,50 @@
+{% extends 'includes/base.html' %}
+
+
+{% block title %}
+    Registrar Departamento
+{% endblock title %}
+
+{% block content %}
+{% include 'includes/header.html' %}
+
+<div class="grid-container">
+    <div class="grid-x">
+        <h1 class="cell">
+            Registrar Departamento
+        </h1>
+
+        <form class="cell grid-x grid-margin-x" method="POST">{% csrf_token %}
+            <div class="cell large-6">
+                <label>Nombres
+                    {{ form.nombre }}
+                </label>
+            </div>
+            <div class="cell large-6">
+                    <label>Apellidos
+                    {{ form.nombre }}
+                </label>
+            </div>
+            <div class="cell large-6">
+                <label>Trabajo
+                    {{ form.nombre }}
+                </label>
+            </div>
+            <div class="cell large-6">
+                <label>Departamento
+                    {{ form.nombre }}
+                </label>
+            </div>
+            <div class="cell large-6">
+                <label>shorname
+                    {{ form.nombre }}
+                </label>
+            </div>
+            <div class="cell">
+                <button type="submit" class="button success">Guardar</button>
+            </div> 
+        </form>
+    </div>
+</div>
+
+{% endblock content %}
